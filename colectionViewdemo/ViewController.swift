@@ -22,10 +22,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     private func initCollectionView() {
-//        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
-//        cView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
-        cView.register(CustomCell.self, forCellWithReuseIdentifier: CustomCell.identifier)
-        cView.collectionViewLayout = CarLensCollectionViewLayout()
+        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
+        cView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
+//        cView.register(CustomCell.self, forCellWithReuseIdentifier: CustomCell.identifier)
+//        cView.collectionViewLayout = CarLensCollectionViewLayout()
         cView.dataSource = self
         cView.delegate = self
     }
@@ -40,10 +40,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CollectionViewCell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCell.identifier, for: indexPath as IndexPath) as! CustomCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CollectionViewCell
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCell.identifier, for: indexPath as IndexPath) as! CustomCell
 
-//        cell.myLabel.text = self.items[indexPath.item]
+        cell.myLabel.text = self.items[indexPath.item]
         
         return cell
     }
