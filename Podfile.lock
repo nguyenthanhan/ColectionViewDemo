@@ -1,0 +1,16 @@
+PODS:
+  - CarLensCollectionViewLayout (1.2.0)
+
+DEPENDENCIES:
+  - CarLensCollectionViewLayout (~> 1.2.0)
+
+SPEC REPOS:
+  trunk:
+    - CarLensCollectionViewLayout
+
+SPEC CHECKSUMS:
+  CarLensCollectionViewLayout: 75a28307dbd7dbacbba417d13501415ff3471a68
+
+PODFILE CHECKSUM: 4722d14243acea9038124aff7959acc56a51d892
+
+COCOAPODS: 1.8.3
